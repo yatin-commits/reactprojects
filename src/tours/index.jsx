@@ -4,8 +4,6 @@ import Loading from './loading';
 export default function Tours({tours}) {
     const[readMore,setReadMore]=useState(false);
     let[toursData,setToursData]=useState(tours);
-    
-
     const readmore=(e)=>
     {  
         setReadMore(!readMore);
@@ -19,7 +17,6 @@ export default function Tours({tours}) {
             
             setToursData(final)
             // setToursData(toursData)     
-            
     }
     const refresh=()=>
     {
@@ -38,8 +35,6 @@ export default function Tours({tours}) {
                         
                         return(
                             <>
-                           
-                            
                             <div className='border-2 border-black w-[100vh] m-5   flex text-center flex-col p-5'>
 
                             <img src={data.image} className='h-80'></img>
@@ -51,16 +46,10 @@ export default function Tours({tours}) {
                             <p className='p-5 text-justify'>{readMore?data.info:`${data.info.substring(0,200)}`}...<a href="#" className='text-blue-400' onClick={readmore}>{readMore?"readless":"read more"}</a></p>
                             <button onClick={()=>notIntrested(data.id)}  className='text-red-700 font-bold p-2 border-2 border-red-500 cursor-pointer'>NOT INTRESTED</button>                  
                             </div>
-                            
                             </>
-
                         )
                     })
                 }
-
-          
-
-
             </div>
 }
             
