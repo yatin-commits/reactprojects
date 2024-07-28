@@ -27,10 +27,10 @@ export default function Tours({tours}) {
     }
   return (
         <>
-            <h1 className='font-mono text-[30px] underline  text-center' >Our Tours</h1>
+            <h1 className='font-mono item-center text-[30px] underline  text-center' >Our Tours</h1>
             {
             toursData.length === 0 
-            ? <><div className='text-[20px] '>No tours available</div><button onClick={refresh}>Refresh</button></>:
+            ? <><div className='p-4  flex flex-col text-[20px] text-center font-[poppins] '><span>No tours available</span><button className=' items-center border-2 text-white font-bold  rounded-md bg-blue-500 p-[5px] ' onClick={refresh}>Refresh</button></div></>:
             <div className='flex  justify-center items-center flex-col'>  
                 {
                     toursData.map((data,index)=>
